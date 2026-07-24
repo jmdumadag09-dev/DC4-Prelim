@@ -1,11 +1,15 @@
-import UseState from "./UseState";
+
+import Product from "./Product";
 
 function App() {
   return (
     <div>
-      <h1>React useState Example</h1>
-
-      <UseState />
+  <Product
+  productName = "Laptop"
+  price = "80000"
+  category ="Electronics"
+  inStock ="50"
+  />
     </div>
   );
 }

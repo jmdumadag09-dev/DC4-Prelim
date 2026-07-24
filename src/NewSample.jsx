@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function App() {
+function NewSample() {
   const [name, setName] = useState("");
 
   return (
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default NewSample;
