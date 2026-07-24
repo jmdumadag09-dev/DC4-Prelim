@@ -14,20 +14,20 @@ function App() {
     name ="Jian Dumadag"
     age ="20"
     course = "BSIT"
-    isRegular ="true"/>
+    isRegular ={true}/>
 
     <StudentCard
     name= "Keir"
      age ="20"
     course = "BSIT"
-    isRegular ="true"
+    isRegular ={true}
     />
 
     <StudentCard
      name = "Aljon"
      age ="20"
     course = "BSIT"
-    isRegular ="fasle"/>
+    isRegular = {false}/>
 
     <AttendanceCounter/>
   </div>
