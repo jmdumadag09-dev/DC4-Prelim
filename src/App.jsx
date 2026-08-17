@@ -1,38 +1,39 @@
-//Jian Macr Dumadag 
-//schedule: 5:00 - 6:00
-//Section 1
-import Header from "./Header";
-import StudentCard from "./StudentCard";
-import AttendanceCounter from "./AttendanceCounter"
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import ThankYou from "./pages/Greet";
+import "./App.css";
 
+function Navbar() {
+  return (
+    <nav>
+      <h2>My Simple Site</h2>
 
-function App() {
-  return(
-  <div>
-    <Header/>
-    <StudentCard
-    name ="Jian Dumadag"
-    age ="20"
-    course = "BSIT"
-    isRegular ={true}/>
-
-    <StudentCard
-    name= "Keir"
-     age ="20"
-    course = "BSIT"
-    isRegular ={true}
-    />
-
-    <StudentCard
-     name = "Aljon"
-     age ="20"
-    course = "BSIT"
-    isRegular = {false}/>
-
-    <AttendanceCounter/>
-  </div>
+      <div>
+        <Link to="/">Home</Link>{" "}
+        <Link to="/about">About</Link>{" "}
+        <Link to="/contact">Contact</Link>
+      </div>
+    </nav>
   );
 }
 
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/greet" element={<ThankYou />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
 
 export default App;

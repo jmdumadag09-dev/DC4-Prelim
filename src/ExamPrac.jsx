@@ -2,17 +2,24 @@ import {useState} from "react";
 
 
 function ExamPrac(){
-    const [count, setCount] =useState(0);
-    const increment = () => setCount(count+1);
-    const decrement =  () => setCount(count-1);
-    const reset = ()=> setCount(0);
+    const [username, setUsername] =useState('');
+    const [email, setEmail] =useState('');
+    const [agreed, setAgreed] =useState(false);
 
+    const handleSubmit = () => {
+        if(!agreed) return;
+    console.log({username, email});
+    };
     return(
-        <p>Count:{count}</p>
-        <button onClick={increment}>Plus</button>
-        <button onClick={decrement}>Minus</button>
-                <button onClick={reset}>Reset</button>
-
-
-    )
+        <div>
+            <form onSubmit = {handleSubmit}>
+                <input value ={username}onChange={e => setUsername(e.target.value)}/>
+                <input value ={email}onCanPlay={e => setEmail(e.target.value)}/>
+                <input type ="checkbox" checked={agreed} onCanPlay={e => setAgreed(e.target.checked)}/>
+                <button type ="submit">Sign up</button>
+            </form>
+ 
+</div>
+    );
 }
+export default ExamPrac;

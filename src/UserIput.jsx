@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-function NewSample() {
+function UserInput() {
   const [name, setName] = useState("");
 
   return (
-    <div>
+    <>
       <input
-        type="text"
-        placeholder="Enter name"
+        value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      <h2>{name}</h2>
-    </div>
+      <h2>Your input: {name}</h2>
+      <br></br>
+    </>
   );
 }
 
-export default App;
+export default UserInput;

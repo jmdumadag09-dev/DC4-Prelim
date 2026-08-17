@@ -4,7 +4,7 @@ function StudentCard(props){
         <p>Student:{props.name}</p>
         <p>Student age:{props.age}</p>
         <p>Course: {props.course}</p>
-        <p>Status: {props.isRegular ? "Regular Student":"Irregular Student"}</p>
+        <p>Status: {props.isRegular ? "Regular Student" : "Irregular Student"}</p>
         </div>
     );
 }
