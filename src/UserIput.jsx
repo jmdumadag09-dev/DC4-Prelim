@@ -10,8 +10,7 @@ function UserInput() {
         onChange={(e) => setName(e.target.value)}
       />
 
-      <h2>Your input: {name}</h2>
-      <br></br>
+      <h2>{name}</h2>
     </>
   );
 }
